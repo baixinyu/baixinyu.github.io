@@ -7,20 +7,9 @@ http://cangfengzhe.github.io/tag/index.html
 http://cangfengzhe.github.io/type/index.html
 http://cangfengzhe.github.io/page/2/index.html
 
-http://cangfengzhe.github.io/project/git-use.html
-http://cangfengzhe.github.io/statistics/statistics.html
-http://cangfengzhe.github.io/r/funSet.html
-http://cangfengzhe.github.io/mysql/mysql%E5%AD%A6%E4%B9%A0.html
-http://cangfengzhe.github.io/r/dplyr-database.html
-http://cangfengzhe.github.io/r/R-parallel.html
-http://cangfengzhe.github.io/r/ggplot2.html
-http://cangfengzhe.github.io/r/R-Package.html
-http://cangfengzhe.github.io/r/ff-package.html
-http://cangfengzhe.github.io/javascript/javascript.html
-http://cangfengzhe.github.io/paper/Systematic%20identification%20of%20genomic.html
-http://cangfengzhe.github.io/r/advR_vocabulary.html
-http://cangfengzhe.github.io/r/funSet.html
-http://cangfengzhe.github.io/%E9%9A%8F%E7%AC%94/New-Blog-Sytle.html
-http://cangfengzhe.github.io/r/DNA%20methylation%20analysis%20with%20Illumina's%20Infinium%20HumanMethylation450K%20array.html
-http://cangfengzhe.github.io/%E9%9A%8F%E7%AC%94/keep-calm-and-carry-on.html
-http://cangfengzhe.github.io/%E9%9A%8F%E7%AC%94/My-First-Blog.html
+http://baixinyu.github.io/r/funSet.html
+http://baixinyu.github.io/r/R-parallel.html
+http://baixinyu.github.io/r/ggplot2.html
+http://baixinyu.github.io/r/R-Package.html
+http://baixinyu.github.io/r/funSet.html
+http://baixinyu.github.io/%E9%9A%8F%E7%AC%94/My-First-Blog.html

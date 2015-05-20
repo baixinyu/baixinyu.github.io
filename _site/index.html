@@ -78,6 +78,9 @@
                     <li class="nav-item">
                         <a class="pure-button" href="/tag">标  签</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="pure-button" href="/resume.html">个人简历</a>
+                    </li>
              <!--        <li class="nav-item">
                  <a class="pure-button" href="/type">收  藏</a>
                                  </li> -->
@@ -102,7 +105,7 @@
                      <li class="nav-link">
                     <a class="rss" href="/rss.xml" ><i class="fa fa-rss fa-2x"></i></a>
                     </li>
-					<p style='margin:0 0;padding:0 0;text-align:left;'>E-mail: hope-dream@163.com</p>
+					<p style='margin:0 0 0 20px;padding:0 0;text-align:left;'>hope-dream@163.com</p>
                 </ul>
             </nav>
         </div>
@@ -114,244 +117,6 @@
             <div class="posts" >
 
                 
-
-<style>	
-h4.post-title  :hover{
-    
-    color:rgb(28, 84, 97);
-    text-decoration: none;
-}</style>
-    <section class="post" style='padding-bottom:0;margin:0'>
-        <header class="post-header">
-            <img class="post-avatar" height="48" width="48"
-                 src="">
-
-            <h4 class="post-title" style=''><a style='' href="/project/git-use.html">git 简短笔记</a></h4>
-
-            <p class="post-meta">By 05月10日  2015  
-        <!--     <a
-                    class="post-categorybut " href="/type/#project">project</a><a
-                    class="post-category " > </a><a
-                    class="post-category " >  </a> -->
-                <!-- 只显示一个类型，多个标签 -->
-                    <a
-            class="post-categorybut " title='分类' href="/type/#project">project</a><!-- <a
-            class="post-category " href="/tag/#"> </a><a
-            class="post-category " href="/tag/#">  </a> -->
-
-            
-            </p>
-        </header>
-
-        <div class="post-description" >
-            <!-- <h2>git status</h2>
-
-<p>目前的状态， 修改（modified）， 删除（deleted）</p>
-
-<h2>git add 操作之前恢复</h2>
-
-<p>git check -- <filename> 恢复特定文件
-git check -- . 恢复全部文件</p>
-
-<h2>git add</h2>
-
-<p>git add filename 添加单个文件
-git add . 或者 git add -A 添加全部修改的文件</p>
-
-<h2>git add 操作之后恢复文件</h2>
- 内容 -->
-
-
-            <!-- <a href="/project/git-use.html" class="post-categorybut">阅读全文</a> -->
-        </div>
-    </section>
-
-
-
-<style>	
-h4.post-title  :hover{
-    
-    color:rgb(28, 84, 97);
-    text-decoration: none;
-}</style>
-    <section class="post" style='padding-bottom:0;margin:0'>
-        <header class="post-header">
-            <img class="post-avatar" height="48" width="48"
-                 src="http://cangfengzhe.github.io/img/">
-
-            <h4 class="post-title" style=''><a style='' href="/statistics/statistics.html">R语言与统计笔记</a></h4>
-
-            <p class="post-meta">By 05月01日  2015  
-        <!--     <a
-                    class="post-categorybut " href="/type/#statistics">statistics</a><a
-                    class="post-category " > R</a><a
-                    class="post-category " >  函数</a> -->
-                <!-- 只显示一个类型，多个标签 -->
-                    <a
-            class="post-categorybut " title='分类' href="/type/#statistics">statistics</a><!-- <a
-            class="post-category " href="/tag/#R"> R</a><a
-            class="post-category " href="/tag/#函数">  函数</a> -->
-
-            
-           <a  class="post-category " title='标签' href="/tag/#R ">R</a>
-    
-           <a  class="post-category " title='标签' href="/tag/#函数 ">函数</a>
-    
-           <a  class="post-category " title='标签' href="/tag/#统计 ">统计</a>
-    
-            </p>
-        </header>
-
-        <div class="post-description" >
-            <!-- <h2>正态性检验</h2>
-
-<h3>Shapiro-Wilk Normality Test</h3>
-
-<p>样本量在3-5000时使用
-<code>shapiro.test(x)</code>
-x a numeric vector of data values. Missing values are allowed, but the number of non-missing values must be between 3 and 5000.</p>
-
-<pre><code>## 
-## shpr.t&gt; shapiro.test(rnorm(100, mean = 5, sd = 3))
-## 
-##  Shapiro-Wilk normality test
-## 
-## data:  rnorm(100, mean = 5, sd = 3)
-## W = 0.9832, p-value = 0.235
-## 
-## 
-## shpr.t&gt; shapiro.test(runif(100, min = 2, max = 4))
-## 
-##  Shapiro-Wilk normality test
-## 
-## data:  runif(100, min = 2, max = 4)
-## W = 0.951, p-value = 0.0009664
-</code></pre>
-
-<h3>Kolmogorov-Smirnov Tests</h3>
-
-<p>统计量大于5000时采用
-<code>r
-ks.test(x, y, ...,
-        alternative = c("two.sided", "less", "greater"),
-        exact = NULL)
-</code>
-此函数用于检测x是否与y为相同分布，可以把y定义为正态分布来检测x时候为正态分布。
-x表示待检测的样本数据，必须为数值型向量
-y可以是数值型向量，也可以是字符型 分布的累计分布函数pnorm，pgamma</p>
-
-<pre><code class="r">example("ks.test")
-</code></pre>
-
-<pre><code>## 
-## ks.tst&gt; require(graphics)
-## 
-## ks.tst&gt; x &lt;- rnorm(50)
-## 
-## ks.tst&gt; y &lt;- runif(30)
-## 
-## ks.tst&gt; # Do x and y come from the same distribution?
-## ks.tst&gt; ks.test(x, y)
-## 
-##  Two-sample Kolmogorov-Smirnov test
-## 
-## data:  x and y
-## D = 0.44, p-value = 0.0009116
-## alternative hypothesis: two-sided
-## 
-## 
-## ks.tst&gt; # Does x come from a shifted gamma distribution with shape 3 and rate 2?
-## ks.tst&gt; ks.test(x+2, "pgamma", 3, 2) # two-sided, exact
-## 
-##  One-sample Kolmogorov-Smirnov test
-## 
-## data:  x + 2
-## D = 0.3566, p-value = 3.376e-06
-## alternative hypothesis: two-sided
-## 
-## 
-## ks.tst&gt; ks.test(x+2, "pgamma", 3, 2, exact = FALSE)
-## 
-##  One-sample Kolmogorov-Smirnov test
-## 
-## data:  x + 2
-## D = 0.3566, p-value = 5.983e-06
-## alternative hypothesis: two-sided
-## 
-## 
-## ks.tst&gt; ks.test(x+2, "pgamma", 3, 2, alternative = "gr")
-## 
-##  One-sample Kolmogorov-Smirnov test
-## 
-## data:  x + 2
-## D^+ = 0.0673, p-value = 0.6088
-## alternative hypothesis: the CDF of x lies above the null hypothesis
-## 
-## 
-## ks.tst&gt; # test if x is stochastically larger than x2
-## ks.tst&gt; x2 &lt;- rnorm(50, -1)
-## 
-## ks.tst&gt; plot(ecdf(x), xlim = range(c(x, x2)))
-</code></pre>
-
-<p><img src="figure/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
-
-<pre><code>## 
-## ks.tst&gt; plot(ecdf(x2), add = TRUE, lty = "dashed")
-## 
-## ks.tst&gt; t.test(x, x2, alternative = "g")
-## 
-##  Welch Two Sample t-test
-## 
-## data:  x and x2
-## t = 5.2277, df = 97.997, p-value = 4.853e-07
-## alternative hypothesis: true difference in means is greater than 0
-## 95 percent confidence interval:
-##  0.6910036       Inf
-## sample estimates:
-##   mean of x   mean of y 
-##  0.02719708 -0.98547305 
-## 
-## 
-## ks.tst&gt; wilcox.test(x, x2, alternative = "g")
-## 
-##  Wilcoxon rank sum test with continuity correction
-## 
-## data:  x and x2
-## W = 1930, p-value = 1.404e-06
-## alternative hypothesis: true location shift is greater than 0
-## 
-## 
-## ks.tst&gt; ks.test(x, x2, alternative = "l")
-## 
-##  Two-sample Kolmogorov-Smirnov test
-## 
-## data:  x and x2
-## D^- = 0.44, p-value = 6.252e-05
-## alternative hypothesis: the CDF of x lies below that of y
-</code></pre>
-
-<h2>两样本检验</h2>
-
-<h3>参数检验</h3>
-
-<h3>当样本符合正态分布时，采用参数检验。</h3>
-
-<h4>未完待续</h4>
-
-<h3>compile tool</h3>
-
-<pre><code class="r">library(knitr)
-knit('/Users/lipidong/baiduyun/work/RFile/MarkDown/statistics.Rmd', output = '~/learn/blog/_posts/2015-05-1-statistics.md')
-</code></pre>
- 内容 -->
-
-
-            <!-- <a href="/statistics/statistics.html" class="post-categorybut">阅读全文</a> -->
-        </div>
-    </section>
-
-
 
 <style>	
 h4.post-title  :hover{
@@ -1664,140 +1429,6 @@ h4.post-title  :hover{
             <img class="post-avatar" height="48" width="48"
                  src="">
 
-            <h4 class="post-title" style=''><a style='' href="/mysql/mysql%E5%AD%A6%E4%B9%A0.html">mysql 学习总结</a></h4>
-
-            <p class="post-meta">By 04月23日  2015  
-        <!--     <a
-                    class="post-categorybut " href="/type/#mysql">mysql</a><a
-                    class="post-category " > database</a><a
-                    class="post-category " >  </a> -->
-                <!-- 只显示一个类型，多个标签 -->
-                    <a
-            class="post-categorybut " title='分类' href="/type/#mysql">mysql</a><!-- <a
-            class="post-category " href="/tag/#database"> database</a><a
-            class="post-category " href="/tag/#">  </a> -->
-
-            
-           <a  class="post-category " title='标签' href="/tag/#database ">database</a>
-    
-            </p>
-        </header>
-
-        <div class="post-description" >
-            <!-- <h3>mysql 查询结果建立新表</h3>
-
-<p>create table table_name select * from  tab1;</p>
-
-<h3>txt导入mysql</h3>
-
-<p>load data infile 'D:\DeskTop\abc.txt' into table tab2
-                               fields terminated by ';'
-                               lines terminated by '\r\n';</p>
-
-<h3>复制表结构</h3>
-
-<p>CREATE TABLE t_1 LIKE db_1.t_1</p>
-
-<h3>复制表数据</h3>
-
-<p>INSERT table_name SELECT * FROM db_1.t_1//</p>
-
-<h3>设置允许安全更新</h3>
-
-<p>set sql_safe_updates=0;</p>
-
-<h3>数据库 删除重复项:</h3>
-
-<p>delete A from bdmol as A,(SELECT <code>mol_index</code>, <code>molid</code>, <code>bdid</code>, <code>bdname</code> FROM <code>bdmol</code> group by <code>molid</code>, <code>bdid</code>, <code>bdname</code> having count(1)>1 order by mol_index ) as B where A.mol_index>B.mol_index and A.molid=B.molid;</p>
-
-<p>where col_name is null 而不是 col_name = null;
-explain，设置主键、索引。</p>
-
-<h3>根据一个表更新另一个表</h3>
-
-<p> update tab1,tab2 set tab1.col1=tab2.col1 where tab1.col2=tab2.col2;</p>
-
-<h3>根据一个表删除另一个表</h3>
-
-<p> delete tab1 from tab1,tab2 where tab1.col1=tab2.col2;</p>
-
-<h3>本地文件导入数据库:</h3>
-
-<p>load data infile "E:\test\test.txt" into table tablename fields terminated by ',' # 字段分割符
-lines terminated by '\r\n';</p>
-
-<h3>导出数据库</h3>
-
-<p>select * into outfile "E:\test\test.txt"  fields terminated by ',' lines terminated by '\r\n' from tablename;</p>
-
-<h3>改变表中字段顺序。</h3>
-
-<p>alter table tab_name change col_name col_name char(10) after col2_name;
-alter table tab_name add column colname char(4); 增加新字段
-alter table tab1 add column Cindex int  AUTO_INCREMENT   primary key first(第一列）；自增字段必须是主键。</p>
- 内容 -->
-
-
-            <!-- <a href="/mysql/mysql%E5%AD%A6%E4%B9%A0.html" class="post-categorybut">阅读全文</a> -->
-        </div>
-    </section>
-
-
-
-<style>	
-h4.post-title  :hover{
-    
-    color:rgb(28, 84, 97);
-    text-decoration: none;
-}</style>
-    <section class="post" style='padding-bottom:0;margin:0'>
-        <header class="post-header">
-            <img class="post-avatar" height="48" width="48"
-                 src="">
-
-            <h4 class="post-title" style=''><a style='' href="/r/dplyr-database.html">dplyr 数据库使用</a></h4>
-
-            <p class="post-meta">By 04月23日  2015  
-        <!--     <a
-                    class="post-categorybut " href="/type/#r">r</a><a
-                    class="post-category " > database</a><a
-                    class="post-category " >  dplyr</a> -->
-                <!-- 只显示一个类型，多个标签 -->
-                    <a
-            class="post-categorybut " title='分类' href="/type/#r">r</a><!-- <a
-            class="post-category " href="/tag/#database"> database</a><a
-            class="post-category " href="/tag/#dplyr">  dplyr</a> -->
-
-            
-           <a  class="post-category " title='标签' href="/tag/#database ">database</a>
-    
-           <a  class="post-category " title='标签' href="/tag/#dplyr ">dplyr</a>
-    
-            </p>
-        </header>
-
-        <div class="post-description" >
-            <!-- 
- 内容 -->
-
-
-            <!-- <a href="/r/dplyr-database.html" class="post-categorybut">阅读全文</a> -->
-        </div>
-    </section>
-
-
-
-<style>	
-h4.post-title  :hover{
-    
-    color:rgb(28, 84, 97);
-    text-decoration: none;
-}</style>
-    <section class="post" style='padding-bottom:0;margin:0'>
-        <header class="post-header">
-            <img class="post-avatar" height="48" width="48"
-                 src="">
-
             <h4 class="post-title" style=''><a style='' href="/r/R-parallel.html">R语言 并行处理</a></h4>
 
             <p class="post-meta">By 04月22日  2015  
@@ -1955,10 +1586,12 @@ g1 &lt;- g +
   theme(panel.grid.major = element_blank(), # 通过设置主题将 主（major）次（minor）网格线去掉
     panel.grid.minor = element_blank(),
     legend.position=c(0.85, 0.85))+      # 设置legend的位置，c(0,0)表示左下角， c(1,1)表示右上角
-  scale_x_continuous(limits= c(-8, 3),   # 设置x轴， continuous表示数据为连续型，limits表示数据的范围
-  breaks = seq(-8, 3, 1.5),  # breaks 表示刻度的表示
-  expand = c(-0.05, 0))+     # 采用 stat=‘bin’会发现 左边，底边图不能对齐到轴线，采用expand可以进行设置，x轴设置了c(-0.05, 0),y轴设置了c(0, 0)这是做出的尝试， 并没有深究其原因
-  scale_y_continuous(limits = c(0, 1500), expand = c(0, 0)) + # 同 scale_x_continuous
+    # scale_x_continuous 改为 coord_cartesian 效果更好
+  # scale_x_continuous(limits= c(-8, 3),   # 设置x轴， continuous表示数据为连续型，limits表示数据的范围
+  # breaks = seq(-8, 3, 1.5),  # breaks 表示刻度的表示
+  # expand = c(-0.05, 0))+     # 采用 stat=‘bin’会发现 左边，底边图不能对齐到轴线，采用expand可以进行设置，x轴设置了c(-0.05, 0),y轴设置了c(0, 0)这是做出的尝试， 并没有深究其原因
+  # scale_y_continuous(limits = c(0, 1500), expand = c(0, 0)) + # 同 scale_x_continuous
+  coord_cartesian(xlim = c(-8, 3), ylim = c(0, 1500))+
   xlab(title)+    # 设置x轴的标题
   ylab('number of molecules')  + # y轴的标题
   ggtitle('Distribution') + # 大标题
@@ -1982,6 +1615,405 @@ coord_cartesian(xlim = c(-50, 50))       # 截取[-50, 50]的数据进行展示�
     </section>
 
 
+
+<style>	
+h4.post-title  :hover{
+    
+    color:rgb(28, 84, 97);
+    text-decoration: none;
+}</style>
+    <section class="post" style='padding-bottom:0;margin:0'>
+        <header class="post-header">
+            <img class="post-avatar" height="48" width="48"
+                 src="">
+
+            <h4 class="post-title" style=''><a style='' href="/r/R-Package.html">R packages</a></h4>
+
+            <p class="post-meta">By 04月02日  2015  
+        <!--     <a
+                    class="post-categorybut " href="/type/#r">r</a><a
+                    class="post-category " > package</a><a
+                    class="post-category " >  </a> -->
+                <!-- 只显示一个类型，多个标签 -->
+                    <a
+            class="post-categorybut " title='分类' href="/type/#r">r</a><!-- <a
+            class="post-category " href="/tag/#package"> package</a><a
+            class="post-category " href="/tag/#">  </a> -->
+
+            
+           <a  class="post-category " title='标签' href="/tag/#package ">package</a>
+    
+            </p>
+        </header>
+
+        <div class="post-description" >
+            <!-- <h1>R pacakge</h1>
+
+<h2>dplyr</h2>
+
+<p>数据处理神器， plyr的升级版，主要用于数据框，可以实现与数据库的快速交互。</p>
+
+<h2>data.table</h2>
+
+<p>读取文件，处理数据，速度比python，dplyr还要快。 就是语法上有些凌乱。</p>
+
+<h2>reshape2， tidyr</h2>
+
+<p>揉数据的法宝，将数据以不同的形式展现，列数由多变少， tidyr 是 reshape2 的升级版，主要用于数据框。</p>
+
+<h2>readr</h2>
+
+<p>2015-04-09 readr 发布，同样是dplyr的作者写的包，包括read_csv, read_delim速度比传统的read.csv, read.delim更快</p>
+
+<h2>httr</h2>
+
+<p>采用了RCurl，可以更快速的访问网络， 提供了 GET, POST, cookie等设置</p>
+
+<h2>rvest</h2>
+
+<p>rvest用于爬取网络数据， 对网络数据进行分析，有点jquery的意思， 类似于python中的 beautiful soup</p>
+
+<h2>splitstackshape</h2>
+
+<p>Stack and Reshape Datasets After Splitting Concatenated Values， 数据分割重组的利器。 其中的cSplit函数可以将单元格中以特殊字符合并的字符串进行分割，分割后增加行或列。</p>
+ 内容 -->
+
+
+            <!-- <a href="/r/R-Package.html" class="post-categorybut">阅读全文</a> -->
+        </div>
+    </section>
+
+
+
+<style>	
+h4.post-title  :hover{
+    
+    color:rgb(28, 84, 97);
+    text-decoration: none;
+}</style>
+    <section class="post" style='padding-bottom:0;margin:0'>
+        <header class="post-header">
+            <img class="post-avatar" height="48" width="48"
+                 src="http://cangfengzhe.github.io/img/">
+
+            <h4 class="post-title" style=''><a style='' href="/r/funSet.html">R语言函数集合</a></h4>
+
+            <p class="post-meta">By 12月26日  2014  
+        <!--     <a
+                    class="post-categorybut " href="/type/#r">r</a><a
+                    class="post-category " > R</a><a
+                    class="post-category " >  函数</a> -->
+                <!-- 只显示一个类型，多个标签 -->
+                    <a
+            class="post-categorybut " title='分类' href="/type/#r">r</a><!-- <a
+            class="post-category " href="/tag/#R"> R</a><a
+            class="post-category " href="/tag/#函数">  函数</a> -->
+
+            
+           <a  class="post-category " title='标签' href="/tag/#R ">R</a>
+    
+           <a  class="post-category " title='标签' href="/tag/#函数 ">函数</a>
+    
+            </p>
+        </header>
+
+        <div class="post-description" >
+            <!-- <h3>any</h3>
+
+<pre><code class="r">range(x &lt;- sort(round(stats::rnorm(10) - 1.2, 1)))
+</code></pre>
+
+<pre><code>## [1] -3.7  0.3
+</code></pre>
+
+<pre><code class="r">if (any(x &lt; 0)) cat("x contains negative values\n")
+</code></pre>
+
+<pre><code>## x contains negative values
+</code></pre>
+
+<p>只要向量中有一个是正确的就返回True</p>
+
+<h3>apply family</h3>
+
+<p><code>apply(X, MARGIN, FUN, ...)</code>
+X为array或matrix， MARGIN为数据下标，1表示行，2表示列，c(1,2) 表示行和列, 如果有行名和列名也可以使用</p>
+
+<pre><code class="r">example(apply)
+</code></pre>
+
+<pre><code>## 
+## apply&gt; ## Compute row and column sums for a matrix:
+## apply&gt; x &lt;- cbind(x1 = 3, x2 = c(4:1, 2:5))
+## 
+## apply&gt; dimnames(x)[[1]] &lt;- letters[1:8]
+## 
+## apply&gt; apply(x, 2, mean, trim = .2)
+## x1 x2 
+##  3  3 
+## 
+## apply&gt; col.sums &lt;- apply(x, 2, sum)
+## 
+## apply&gt; row.sums &lt;- apply(x, 1, sum)
+## 
+## apply&gt; rbind(cbind(x, Rtot = row.sums), Ctot = c(col.sums, sum(col.sums)))
+##      x1 x2 Rtot
+## a     3  4    7
+## b     3  3    6
+## c     3  2    5
+## d     3  1    4
+## e     3  2    5
+## f     3  3    6
+## g     3  4    7
+## h     3  5    8
+## Ctot 24 24   48
+## 
+## apply&gt; stopifnot( apply(x, 2, is.vector))
+## 
+## apply&gt; ## Sort the columns of a matrix
+## apply&gt; apply(x, 2, sort)
+##      x1 x2
+## [1,]  3  1
+## [2,]  3  2
+## [3,]  3  2
+## [4,]  3  3
+## [5,]  3  3
+## [6,]  3  4
+## [7,]  3  4
+## [8,]  3  5
+## 
+## apply&gt; ##- function with extra args:
+## apply&gt; cave &lt;- function(x, c1, c2) c(mean(x[c1]), mean(x[c2]))
+## 
+## apply&gt; apply(x, 1, cave,  c1 = "x1", c2 = c("x1","x2"))
+##        a b   c d   e f   g h
+## [1,] 3.0 3 3.0 3 3.0 3 3.0 3
+## [2,] 3.5 3 2.5 2 2.5 3 3.5 4
+## 
+## apply&gt; ma &lt;- matrix(c(1:4, 1, 6:8), nrow = 2)
+## 
+## apply&gt; ma
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    3    1    7
+## [2,]    2    4    6    8
+## 
+## apply&gt; apply(ma, 1, table)  #--&gt; a list of length 2
+## [[1]]
+## 
+## 1 3 7 
+## 2 1 1 
+## 
+## [[2]]
+## 
+## 2 4 6 8 
+## 1 1 1 1 
+## 
+## 
+## apply&gt; apply(ma, 1, stats::quantile) # 5 x n matrix with rownames
+##      [,1] [,2]
+## 0%      1  2.0
+## 25%     1  3.5
+## 50%     2  5.0
+## 75%     4  6.5
+## 100%    7  8.0
+## 
+## apply&gt; stopifnot(dim(ma) == dim(apply(ma, 1:2, sum)))
+## 
+## apply&gt; ## Example with different lengths for each call
+## apply&gt; z &lt;- array(1:24, dim = 2:4)
+## 
+## apply&gt; zseq &lt;- apply(z, 1:2, function(x) seq_len(max(x)))
+## 
+## apply&gt; zseq         ## a 2 x 3 matrix
+##      [,1]       [,2]       [,3]      
+## [1,] Integer,19 Integer,21 Integer,23
+## [2,] Integer,20 Integer,22 Integer,24
+## 
+## apply&gt; typeof(zseq) ## list
+## [1] "list"
+## 
+## apply&gt; dim(zseq) ## 2 3
+## [1] 2 3
+## 
+## apply&gt; zseq[1,]
+## [[1]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19
+## 
+## [[2]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+## 
+## [[3]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+## 
+## 
+## apply&gt; apply(z, 3, function(x) seq_len(max(x)))
+## [[1]]
+## [1] 1 2 3 4 5 6
+## 
+## [[2]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12
+## 
+## [[3]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+## 
+## [[4]]
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+## [24] 24
+## 
+## 
+## apply&gt; # a list without a dim attribute
+## apply&gt; 
+## apply&gt; 
+## apply&gt;
+</code></pre>
+
+<p><code>lapply(X, FUN, ...)</code>
+返回list，可以用 <code>do.call('cbind',output)</code> 合并为data.frame</p>
+
+<p><code>sapply(X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)</code>
+simplify=T 输出matrix，F输出list(相当于lapply)</p>
+
+<p><code>vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)</code>
+FUN.VALUE定义输出的结果</p>
+
+<p><code>mapply(FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, USE.NAMES = TRUE)</code>
+函数为第一个参数，其他函数（都可以是变量）随后输入，返回list</p>
+
+<p>example</p>
+
+<pre><code class="r">word &lt;- function(C, k) paste(rep.int(C, k), collapse = "")
+utils::str(mapply(word, LETTERS[1:6], 6:1, SIMPLIFY = FALSE))
+</code></pre>
+
+<pre><code>## List of 6
+##  $ A: chr "AAAAAA"
+##  $ B: chr "BBBBB"
+##  $ C: chr "CCCC"
+##  $ D: chr "DDD"
+##  $ E: chr "EE"
+##  $ F: chr "F"
+</code></pre>
+
+<p><code>X</code> 为列表或向量，如果为矩阵会强制转换为list，表示调用函数的第一个参数；
+<code>FUN</code> 函数
+<code>...</code> 表示函数的其他参数，可以依次添加
+<code>USE.NAMES</code> 上面的参数<code>...</code>如果使用了字符串，那么这个字符串将作为输出结果过的行名。</p>
+
+<h3>identical</h3>
+
+<p><code>identical(x, y, num.eq = TRUE, single.NA = TRUE, attrib.as.set = TRUE,          ignore.bytecode = TRUE, ignore.environment = FALSE)</code>
+判断x，y是否相同（数值，类型）</p>
+
+<h3>reduce</h3>
+
+<p><code>Reduce(f, x, init, right = FALSE, accumulate = FALSE)</code>
+迭代函数,f为函数，x为vector, 先对vector前两项进行处理，随后的结果和第三项进行运算，依次迭代</p>
+
+<pre><code class="r">Reduce('+', 1:10)
+</code></pre>
+
+<pre><code>## [1] 55
+</code></pre>
+
+<h3>Filter</h3>
+
+<p><code>Filter(f, x)</code>
+采用f函数对x进行处理，返回结果正确的数值
+dplyr中的函数filter效率更高</p>
+
+<pre><code class="r">Filter(function(x){x%%2==0}, 1:10)
+</code></pre>
+
+<pre><code>## [1]  2  4  6  8 10
+</code></pre>
+
+<pre><code class="r"> ctrl+alt+I insert chunk
+</code></pre>
+
+<h3>melt</h3>
+
+<pre><code class="r">melt(data, id.vars, measure.vars,
+  variable.name = "variable", ..., na.rm = FALSE, value.name = "value",
+  factorsAsStrings = TRUE)
+</code></pre>
+
+<p>id.vars 表示固定不变的列
+measure.vars 控制变量,只显示的行
+variable.name 重塑后控制变量的列名
+value.name 重塑后数值变量的列名</p>
+
+<blockquote><p>如果data为matrix格式，则不执行上述标准，变成行列的对应值</p></blockquote>
+
+<h3>cast</h3>
+
+<h3>gc</h3>
+
+<p>用于垃圾回收</p>
+ 内容 -->
+
+
+            <!-- <a href="/r/funSet.html" class="post-categorybut">阅读全文</a> -->
+        </div>
+    </section>
+
+
+
+<style>	
+h4.post-title  :hover{
+    
+    color:rgb(28, 84, 97);
+    text-decoration: none;
+}</style>
+    <section class="post" style='padding-bottom:0;margin:0'>
+        <header class="post-header">
+            <img class="post-avatar" height="48" width="48"
+                 src="">
+
+            <h4 class="post-title" style=''><a style='' href="/%E9%9A%8F%E7%AC%94/My-First-Blog.html">My First Blog</a></h4>
+
+            <p class="post-meta">By 12月08日  2014  
+        <!--     <a
+                    class="post-categorybut " href="/type/#随笔">随笔</a><a
+                    class="post-category " > 冷静</a><a
+                    class="post-category " >  坚持</a> -->
+                <!-- 只显示一个类型，多个标签 -->
+                    <a
+            class="post-categorybut " title='分类' href="/type/#随笔">随笔</a><!-- <a
+            class="post-category " href="/tag/#冷静"> 冷静</a><a
+            class="post-category " href="/tag/#坚持">  坚持</a> -->
+
+            
+           <a  class="post-category " title='标签' href="/tag/#冷静 ">冷静</a>
+    
+           <a  class="post-category " title='标签' href="/tag/#坚持 ">坚持</a>
+    
+            </p>
+        </header>
+
+        <div class="post-description" >
+            <!-- <h3>我的第一篇博客</h3>
+
+<p>  鼓捣了几天，终于在github上建了一个简单的博客。觉得最近有些颓废，很多事情不喜欢做，不断的拖延。这种状态让我很痛苦。</p>
+
+<p>  但是我绝对不能倒下，我要坚持，我要快乐的坚持。</p>
+
+<p>  熬过去了，再去回首这段艰难时间，会发现这根本就算不了什么。没有过不去的坎儿，只要有恒心有毅力。</p>
+
+<p>  非常感谢小小白，在这段艰难的日子里一直陪着我，我很幸福。小小白是个很好的姑娘，是我总是忽略她，很对不起她。</p>
+
+<blockquote><p>亲爱的，感谢你在我最困难的时候与我并肩前行。你若不离不弃，我必生死相依。</p></blockquote>
+
+<p>   挺住就意味着一切。</p>
+
+<blockquote><p>爱生活，爱小小白</p></blockquote>
+ 内容 -->
+
+
+            <!-- <a href="/%E9%9A%8F%E7%AC%94/My-First-Blog.html" class="post-categorybut">阅读全文</a> -->
+        </div>
+    </section>
+
+
 <div class="pure-g pagination">
     
     <span class=" pure-u-1-2 pagination-item"><p>Newer</p></span>
@@ -1989,7 +2021,7 @@ coord_cartesian(xlim = c(-50, 50))       # 截取[-50, 50]的数据进行展示�
 
 
     
-    <a class=" pure-u-1-2 pagination-item" href="/page/2"><p>Older</p></a>
+    <span class=" pure-u-1-2 pagination-item"><p>Older</p></span>
     
 </div>
 
@@ -2006,7 +2038,7 @@ coord_cartesian(xlim = c(-50, 50))       # 截取[-50, 50]的数据进行展示�
                 <!-- <a href="/love/welcome-my-blog.html">About</a>
                  <a href="/1">Collecting</a>
                 <a href="tencent://message/?uin=78956287">QQ</a> -->
-                <a href="https://github.com/cangfengzhe">GitHub</a>
+                <a href="https://github.com/baixinyu">GitHub</a>
             <script src="/js/min/nprogress.min.js"></script>
             <script src="/js/index.js"></script>
         </div>
