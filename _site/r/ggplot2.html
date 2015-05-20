@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="爱生活 爱小小白">
+    <meta name="keywords" content="R, 函数"/>
+    <meta name="author" content="Pidong Li"> 
+    <link rel="canonical" href="http://cangfengzhe.github.com/r/ggplot2.html">
+    <link href="http://cangfengzhe.github.io/rss.xml" title="RSS 2.0" type="application/rss+xml" rel="alternate"/>
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
+    <title>ggplot2 学习 - 爱生活 爱小小白</title>
+    <link rel="stylesheet" href="/css/min/pure-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/min/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/min/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/JekyllPure-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/JekyllPure.css">
+    <!--<![endif]-->
+
+    <link href="/css/min/font-awesome.min.css" rel="stylesheet">
+	<!-- <link href="/js/googleprettify/prettify.css" rel="stylesheet"> -->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/min/font-awesome-ie7.min.css">
+    <![endif]-->
+    <script src="/js/min/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" href="/js/styles/railscasts.css">
+
+
+    <!--
+     /\_ \    __                         /\ \                __
+     \//\ \  /\_\  __  __    ___   __  __\ \ \___      __   /\_\
+       \ \ \ \/\ \/\ \/\ \  / __`\/\ \/\ \\ \  _ `\  /'__`\ \/\ \
+        \_\ \_\ \ \ \ \_\ \/\ \L\ \ \ \_\ \\ \ \ \ \/\ \L\.\_\ \ \
+        /\____\\ \_\/`____ \ \____/\ \____/ \ \_\ \_\ \__/.\_\\ \_\
+        \/____/ \/_/`/___/> \/___/  \/___/   \/_/\/_/\/__/\/_/ \/_/
+                       /\___/
+                       \/__/
+     图像可以到http://asciigen.com/  生成..记得翻墙才能正常生成.如不方便可以博客留言我帮你生成
+     -->
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <div class="headerpic">
+                <a href="/">
+                    <img src="/img/lovexinyu.png" alt="Profile Picture" style="width: 140px;" title="返回首页">
+                </a>
+            </div>
+            <h2 class="brand-title" style='margin:5px 0;'>爱生活 爱小小白</h2>
+            <h3 class="brand-tagline">静能寒窗苦守，动能点石成金</h3>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="/Timing">时间轴</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="pure-button" href="/type">分  类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/tag">标  签</a>
+                    </li>
+             <!--        <li class="nav-item">
+                 <a class="pure-button" href="/type">收  藏</a>
+                                 </li> -->
+                </ul>
+            </nav>
+            <div class="search">
+                <form action="/search">
+                    <input type="text" class="search-query" placeholder="Search Blog" name="query" title="全站搜索-只支持英文">
+                </form>
+            </div>
+            <div id="toc"></div>
+            <nav id="nav">
+                <ul class="nav-list">
+                    <!-- <li class="nav-link">
+                    <a class="weibo "  href="http://weibo.com/localhost0000" ><i class="fa fa-weibo fa-2x"></i></a>
+                    </li> -->
+                    <li class="nav-link">
+                    <a class="github" href="https://github.com/cangfengzhe"><i class="fa fa-github fa-2x"></i></a>
+                    </li>
+                    
+                    
+                     <li class="nav-link">
+                    <a class="rss" href="/rss.xml" ><i class="fa fa-rss fa-2x"></i></a>
+                    </li>
+					<p style='margin:0 0;padding:0 0;text-align:left;'>E-mail: hope-dream@163.com</p>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4" style='padding-left:0'>
+      
+        <div>
+            <div class="posts" >
+
+                <div class="qrcodeTable"></div>
+<header class="post-header">
+    <img class="post-avatar" height="48" width="48" src="http://cangfengzhe.github.io/img/">
+
+    <h2 class="post-title">ggplot2 学习</h2>
+
+    <p class="post-meta">By 04月15日 2015 <a class="post-categorybut " href="/type/#">r</a>
+        <!-- <a
+            class="post-category " href="/tag/#R"> R</a><a
+            class="post-category " href="/tag/#函数">  函数</a> -->
+        
+        <a class="post-category " href="/tag/#R">R</a> 
+        <a class="post-category " href="/tag/#函数">函数</a> 
+    </p>
+
+
+
+
+
+
+</header>
+<div class="article pure-u-22-24">
+    <p><code>theme(axis.text.x=element_text(angle=90, size=8, vjust=0.8))</code>
+旋转x轴标题</p>
+
+<p><code>theme(plot.margin = unit(c(0.1, 0, 0, 0),"cm"))</code>
+为图片设置margin， 顺序遵循 上右下左</p>
+
+<pre><code class="r">library(gridExtra)
+grid.arrange(g1, g2, g3, g4, main, sub, left)
+</code></pre>
+
+<p>合并多个ggplot2的图片并可以设置main, sub, left等标题。</p>
+
+<p>标题可以通过<code>textGrob</code>设置格式
+<code>main &lt;- textGrob('title', gp=gpar(cex = 1.2), vjust = 1)</code></p>
+
+<h3>条形图实例，原始数据并没有提供</h3>
+
+<pre><code class="r">g &lt;- ggplot(data = data, aes_string(x = colname)) +  # colname 为字符串，可以用aes_string() 进行转换
+  geom_bar(aes(fill = factor(flag)), # 用到data中的数据，建立映射关系均要用到aes，fill表示填充，后面会设置具体的填充颜色，如不设置会采用系统默认，凡是表示分组都要转换为factor
+            colour="white",  # colour设置边框的颜色， width 设置
+            stat='bin',      # stat=‘bin’ 表示系统自行计算频数作为y轴， stat = 'identity'表示使用自己的数据作为y轴    
+            #width = 0,      # 两个bar的间隔，当x轴为连续数据时不起作用
+            binwidth = 0.3,  # 区段的长度， 计算该区段的频数
+            na.rm = T        # 清除空值
+            )  
+
+g1 &lt;- g +
+  theme_bw() +  #设置主题， 将背景作为白色
+  scale_fill_manual(values = c('1' = color1, '0' = color2), name = 'value', labels = c('&lt;=-0.3 &amp; &gt;=0.3','&gt;-0.3 &amp; &lt;0.3')) + # 设置填充的方式，manual表示手动填充， 这里的‘1’和‘0’表示`fill=factor(flag)`中的levels， 那么为legend title， label 为legend标签
+  theme(panel.grid.major = element_blank(), # 通过设置主题将 主（major）次（minor）网格线去掉
+    panel.grid.minor = element_blank(),
+    legend.position=c(0.85, 0.85))+      # 设置legend的位置，c(0,0)表示左下角， c(1,1)表示右上角
+  scale_x_continuous(limits= c(-8, 3),   # 设置x轴， continuous表示数据为连续型，limits表示数据的范围
+  breaks = seq(-8, 3, 1.5),  # breaks 表示刻度的表示
+  expand = c(-0.05, 0))+     # 采用 stat=‘bin’会发现 左边，底边图不能对齐到轴线，采用expand可以进行设置，x轴设置了c(-0.05, 0),y轴设置了c(0, 0)这是做出的尝试， 并没有深究其原因
+  scale_y_continuous(limits = c(0, 1500), expand = c(0, 0)) + # 同 scale_x_continuous
+  xlab(title)+    # 设置x轴的标题
+  ylab('number of molecules')  + # y轴的标题
+  ggtitle('Distribution') + # 大标题
+  theme( axis.title = element_text(size= 18),  # 设置轴标题，可以细致到 axis.title.x, axis.title.y
+  axis.text = element_text(size = 14),      # 设置轴刻度
+  legend.title = element_text(size = 12),   # 设置图例的标题
+  legend.text = element_text(size = 12))    # 设置图例的项目
+</code></pre>
+
+<p><code>png("plot01.png", width=35, height=20, res=300, units = 'cm')</code>
+导出png文件，单位为cm</p>
+
+<pre><code class="r">scale_x_continuous(limits = c(-50, 50))  # 截取[-50, 50]的数据进行作图，改变了原始数据
+coord_cartesian(xlim = c(-50, 50))       # 截取[-50, 50]的数据进行展示，原始数据不变
+</code></pre>
+
+</div>
+<div class="pure-g pagination">
+    
+    <a class="pure-u-1-2 pagination-item " href="/r/R-Package.html" title="R packages ">
+        <p> <i class="fa fa-mail-reply"></i>&nbsp;R packages</p>
+    </a>
+     
+    <a class="pure-u-1-2 pagination-item " href="/r/R-parallel.html" title="R语言 并行处理">
+        <p>R语言 并行处理&nbsp;<i class="fa fa-mail-forward"></i>
+        </p>
+    </a>
+    
+</div>
+<link href="/css/code.css" rel="stylesheet">
+<link href="/css/min/fancybox.css" rel="stylesheet">
+<script src="/js/min/jquery.toc.min.js"></script>
+<script src="/js/min/jquery.qrcode.min.js"></script>
+<script src="/js/min/jquery.fancybox.pack.js"></script>
+<script src="/js/page.js"></script>
+
+ 
+    
+
+<div id="comment">
+<style type="text/css">
+.cm{
+    margin: 0 10px;
+}
+    .cm:hover{
+        cursor:pointer;
+    }
+</style>
+<h3>COMMENT
+    <span class='cm' onclick='showduoshuo();'>多说</span>
+    <span class='cm' onclick='showqisqus();' style=' font-size:20px;'>Disqus</span></h3>
+    <div id="disqus_thread"></div>
+    <!-- 多说评论框 start -->
+    <div id="ds-thread" class="ds-thread" style='display: none;'  data-title="ggplot2 学习" data-url=""></div>
+
+</div>
+
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+var duoshuoQuery = {
+        short_name: "cangfengzhe"
+    };
+
+
+
+
+var disqus_shortname = 'cangfengzhe'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+    })();
+
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+
+var ds=document.getElementById('ds-thread');
+var dsq=document.getElementById('disqus_thread')
+function showduoshuo() {
+    ds.style.display = 'block';
+    ds.style.color='#444';
+    dsq.style.display = 'none';
+    
+
+    
+}
+
+function showqisqus() {
+
+    ds.style.display = 'none';
+
+    dsq.style.display = 'block';
+    dsq.style.color='#444';
+
+    
+}
+
+ 
+
+</script>
+
+
+            </div>
+            </div>
+        <div class="footer">
+                <!-- <a href="/love/welcome-my-blog.html">About</a>
+                 <a href="/1">Collecting</a>
+                <a href="tencent://message/?uin=78956287">QQ</a> -->
+                <a href="https://github.com/cangfengzhe">GitHub</a>
+            <script src="/js/min/nprogress.min.js"></script>
+            <script src="/js/index.js"></script>
+        </div>
+        <div class="topfade"><a href="javascript:;" title="返回顶部"></a></div>
+
+    </div>
+
+</div>
+	<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

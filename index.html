@@ -1,0 +1,70 @@
+---
+layout: blog
+description: "爱生活 爱小小白"
+---
+
+{% for post in paginator.posts %}
+
+<style>	
+h4.post-title  :hover{
+    
+    color:rgb(28, 84, 97);
+    text-decoration: none;
+}</style>
+    <section class="post" style='padding-bottom:0;margin:0'>
+        <header class="post-header">
+            <img class="post-avatar" height="48" width="48"
+                 src="{{ post.avatarimg }}">
+
+            <h4 class="post-title" style=''><a style='' href="{{ post.url }}">{{ post.title }}</a></h4>
+
+            <p class="post-meta">By {{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日  {{ post.date | date: "%Y" }}  
+        <!--     <a
+                    class="post-categorybut " href="/type/#{{ post.categories  }}">{{ post.categories  }}</a><a
+                    class="post-category " > {{ post.tags | first }}</a><a
+                    class="post-category " >  {{ post.tags[1] }}</a> -->
+                <!-- 只显示一个类型，多个标签 -->
+                    <a
+            class="post-categorybut " title='分类' href="/type/#{{ post.categories[0]  }}">{{ post.categories[0]  }}</a><!-- <a
+            class="post-category " href="/tag/#{{ post.tags | first }}"> {{ post.tags | first }}</a><a
+            class="post-category " href="/tag/#{{ post.tags[1] }}">  {{ post.tags[1] }}</a> -->
+
+            {% for tag in post.tags %}
+           <a  class="post-category " title='标签' href="/tag/#{{ tag }} ">{{ tag }}</a>
+    {% endfor %}
+            </p>
+        </header>
+
+        <div class="post-description" >
+            <!-- {{ post.content | split:'分隔符'| first }} 内容 -->
+
+
+            <!-- <a href="{{ post.url }}" class="post-categorybut">阅读全文</a> -->
+        </div>
+    </section>
+
+{% endfor %}
+<div class="pure-g pagination">
+    {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a class="pure-u-1-2 pagination-item" href="/"><p>Newer</p></a>
+    {% else %}
+    <a class=" pure-u-1-2 pagination-item" href="/page/{{paginator.previous_page}}"><p>Newer</p></a>
+    {% endif %}
+    {% else %}
+    <span class=" pure-u-1-2 pagination-item"><p>Newer</p></span>
+    {% endif %}
+
+
+    {% if paginator.next_page %}
+    <a class=" pure-u-1-2 pagination-item" href="/page/{{paginator.next_page}}"><p>Older</p></a>
+    {% else %}
+    <span class=" pure-u-1-2 pagination-item"><p>Older</p></span>
+    {% endif %}
+</div>
+
+
+
+
+
+

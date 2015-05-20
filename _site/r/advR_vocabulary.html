@@ -1,0 +1,982 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Vocabulary in Advanced R by Hadley Wickham R语言 函数描述">
+    <meta name="keywords" content="Advanced R"/>
+    <meta name="author" content="Pidong Li"> 
+    <link rel="canonical" href="http://cangfengzhe.github.com/r/advR_vocabulary.html">
+    <link href="http://cangfengzhe.github.io/rss.xml" title="RSS 2.0" type="application/rss+xml" rel="alternate"/>
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
+    <title>The Vocabulary in Advanced R by Hadley Wickham - 爱生活 爱小小白</title>
+    <link rel="stylesheet" href="/css/min/pure-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/min/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/min/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/JekyllPure-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/JekyllPure.css">
+    <!--<![endif]-->
+
+    <link href="/css/min/font-awesome.min.css" rel="stylesheet">
+	<!-- <link href="/js/googleprettify/prettify.css" rel="stylesheet"> -->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/min/font-awesome-ie7.min.css">
+    <![endif]-->
+    <script src="/js/min/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" href="/js/styles/railscasts.css">
+
+
+    <!--
+     /\_ \    __                         /\ \                __
+     \//\ \  /\_\  __  __    ___   __  __\ \ \___      __   /\_\
+       \ \ \ \/\ \/\ \/\ \  / __`\/\ \/\ \\ \  _ `\  /'__`\ \/\ \
+        \_\ \_\ \ \ \ \_\ \/\ \L\ \ \ \_\ \\ \ \ \ \/\ \L\.\_\ \ \
+        /\____\\ \_\/`____ \ \____/\ \____/ \ \_\ \_\ \__/.\_\\ \_\
+        \/____/ \/_/`/___/> \/___/  \/___/   \/_/\/_/\/__/\/_/ \/_/
+                       /\___/
+                       \/__/
+     图像可以到http://asciigen.com/  生成..记得翻墙才能正常生成.如不方便可以博客留言我帮你生成
+     -->
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <div class="headerpic">
+                <a href="/">
+                    <img src="/img/lovexinyu.png" alt="Profile Picture" style="width: 140px;" title="返回首页">
+                </a>
+            </div>
+            <h2 class="brand-title" style='margin:5px 0;'>爱生活 爱小小白</h2>
+            <h3 class="brand-tagline">静能寒窗苦守，动能点石成金</h3>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="/Timing">时间轴</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="pure-button" href="/type">分  类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/tag">标  签</a>
+                    </li>
+             <!--        <li class="nav-item">
+                 <a class="pure-button" href="/type">收  藏</a>
+                                 </li> -->
+                </ul>
+            </nav>
+            <div class="search">
+                <form action="/search">
+                    <input type="text" class="search-query" placeholder="Search Blog" name="query" title="全站搜索-只支持英文">
+                </form>
+            </div>
+            <div id="toc"></div>
+            <nav id="nav">
+                <ul class="nav-list">
+                    <!-- <li class="nav-link">
+                    <a class="weibo "  href="http://weibo.com/localhost0000" ><i class="fa fa-weibo fa-2x"></i></a>
+                    </li> -->
+                    <li class="nav-link">
+                    <a class="github" href="https://github.com/cangfengzhe"><i class="fa fa-github fa-2x"></i></a>
+                    </li>
+                    
+                    
+                     <li class="nav-link">
+                    <a class="rss" href="/rss.xml" ><i class="fa fa-rss fa-2x"></i></a>
+                    </li>
+					<p style='margin:0 0;padding:0 0;text-align:left;'>E-mail: hope-dream@163.com</p>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4" style='padding-left:0'>
+      
+        <div>
+            <div class="posts" >
+
+                <div class="qrcodeTable"></div>
+<header class="post-header">
+    <img class="post-avatar" height="48" width="48" src="http://cangfengzhe.github.io/img/">
+
+    <h2 class="post-title">The Vocabulary in Advanced R by Hadley Wickham</h2>
+
+    <p class="post-meta">By 12月30日 2014 <a class="post-categorybut " href="/type/#">r</a>
+        <!-- <a
+            class="post-category " href="/tag/#Advanced R"> Advanced R</a><a
+            class="post-category " href="/tag/#">  </a> -->
+        
+        <a class="post-category " href="/tag/#Advanced R">Advanced R</a> 
+    </p>
+
+
+
+
+
+
+</header>
+<div class="article pure-u-22-24">
+    <p>Hadley Wickham 前辈写的Advanced R中提到了部分常见的Vocabulary，现在对这些常见的函数进行了解，只做简单的解释，如需深入请<code>help()</code>。</p>
+
+<h2>Basic</h2>
+
+<h3><code>?</code></h3>
+
+<p>提供帮助相当于<code>help()</code></p>
+
+<hr />
+
+<h3><code>str</code></h3>
+
+<p>简单的展示对象的结构,可用于任何R对象、函数.拿到一个R对象都可以用`str'进行探索性分析，有点类似与summary。</p>
+
+<p>example</p>
+
+<pre><code class="r">str(1:12)
+</code></pre>
+
+<pre><code>##  int [1:12] 1 2 3 4 5 6 7 8 9 10 ...
+</code></pre>
+
+<pre><code class="r">str( lsfit(1:9, 1:9))
+</code></pre>
+
+<pre><code>## List of 4
+##  $ coefficients: Named num [1:2] 1.18e-15 1.00
+##   ..- attr(*, "names")= chr [1:2] "Intercept" "X"
+##  $ residuals   : num [1:9] -9.01e-16 1.72e-15 -2.47e-16 -2.25e-16 -2.03e-16 ...
+##  $ intercept   : logi TRUE
+##  $ qr          :List of 6
+##   ..$ qt   : num [1:9] -1.50e+01 7.75 -2.22e-16 0.00 2.22e-16 ...
+##   ..$ qr   : num [1:9, 1:2] -3 0.333 0.333 0.333 0.333 ...
+##   .. ..- attr(*, "dimnames")=List of 2
+##   .. .. ..$ : NULL
+##   .. .. ..$ : chr [1:2] "Intercept" "X"
+##   ..$ qraux: num [1:2] 1.33 1.26
+##   ..$ rank : int 2
+##   ..$ pivot: int [1:2] 1 2
+##   ..$ tol  : num 1e-07
+##   ..- attr(*, "class")= chr "qr"
+</code></pre>
+
+<pre><code class="r">str( lsfit(1:9, 1:9), max.level = 1)
+</code></pre>
+
+<pre><code>## List of 4
+##  $ coefficients: Named num [1:2] 1.18e-15 1.00
+##   ..- attr(*, "names")= chr [1:2] "Intercept" "X"
+##  $ residuals   : num [1:9] -9.01e-16 1.72e-15 -2.47e-16 -2.25e-16 -2.03e-16 ...
+##  $ intercept   : logi TRUE
+##  $ qr          :List of 6
+##   ..- attr(*, "class")= chr "qr"
+</code></pre>
+
+<pre><code class="r">str( lsfit(1:9, 1:9), width = 60, strict.width = "cut")
+</code></pre>
+
+<pre><code>## List of 4
+##  $ coefficients: Named num [1:2] 1.18e-15 1.00
+##   ..- attr(*, "names")= chr [1:2] "Intercept" "X"
+##  $ residuals   : num [1:9] -9.01e-16 1.72e-15 -2.47e-16 -2..
+##  $ intercept   : logi TRUE
+##  $ qr          :List of 6
+##   ..$ qt   : num [1:9] -1.50e+01 7.75 -2.22e-16 0.00 2.22e..
+##   ..$ qr   : num [1:9, 1:2] -3 0.333 0.333 0.333 0.333 ...
+##   .. ..- attr(*, "dimnames")=List of 2
+##   .. .. ..$ : NULL
+##   .. .. ..$ : chr [1:2] "Intercept" "X"
+##   ..$ qraux: num [1:2] 1.33 1.26
+##   ..$ rank : int 2
+##   ..$ pivot: int [1:2] 1 2
+##   ..$ tol  : num 1e-07
+##   ..- attr(*, "class")= chr "qr"
+</code></pre>
+
+<pre><code class="r">str( lsfit(1:9, 1:9), width = 60, strict.width = "wrap")
+</code></pre>
+
+<pre><code>## List of 4
+## $ coefficients: Named num [1:2] 1.18e-15 1.00
+## ..- attr(*, "names")= chr [1:2] "Intercept" "X"
+## $ residuals : num [1:9] -9.01e-16 1.72e-15 -2.47e-16
+##    -2.25e-16 -2.03e-16 ...
+## $ intercept : logi TRUE
+## $ qr :List of 6
+## ..$ qt : num [1:9] -1.50e+01 7.75 -2.22e-16 0.00 2.22e-16
+##    ...
+## ..$ qr : num [1:9, 1:2] -3 0.333 0.333 0.333 0.333 ...
+## .. ..- attr(*, "dimnames")=List of 2
+## .. .. ..$ : NULL
+## .. .. ..$ : chr [1:2] "Intercept" "X"
+## ..$ qraux: num [1:2] 1.33 1.26
+## ..$ rank : int 2
+## ..$ pivot: int [1:2] 1 2
+## ..$ tol : num 1e-07
+## ..- attr(*, "class")= chr "qr"
+</code></pre>
+
+<pre><code class="r">op &lt;- options(); str(op) 
+</code></pre>
+
+<pre><code>## List of 68
+##  $ add.smooth           : logi TRUE
+##  $ browser              :function (url)  
+##  $ browserNLdisabled    : logi FALSE
+##  $ buildtools.check     :function (action)  
+##  $ buildtools.with      :function (code)  
+##  $ CBoundsCheck         : logi FALSE
+##  $ check.bounds         : logi FALSE
+##  $ citation.bibtex.max  : num 1
+##  $ continue             : chr "+ "
+##  $ contrasts            : Named chr [1:2] "contr.treatment" "contr.poly"
+##   ..- attr(*, "names")= chr [1:2] "unordered" "ordered"
+##  $ defaultPackages      : chr [1:6] "datasets" "utils" "grDevices" "graphics" ...
+##  $ demo.ask             : chr "default"
+##  $ deparse.cutoff       : int 60
+##  $ device               :function (width = 7, height = 7, ...)  
+##  $ device.ask.default   : logi FALSE
+##  $ digits               : int 7
+##  $ dplyr.print_max      : int 100
+##  $ dplyr.print_min      : int 10
+##  $ dplyr.strict_sql     : logi FALSE
+##  $ echo                 : logi TRUE
+##  $ editor               :function (name, file, title)  
+##  $ encoding             : chr "native.enc"
+##  $ error                : language (structure(function ()  { ...
+##  $ example.ask          : chr "default"
+##  $ expressions          : int 5000
+##  $ ggvis.renderer       : chr "svg"
+##  $ help.search.types    : chr [1:3] "vignette" "demo" "help"
+##  $ help.try.all.packages: logi FALSE
+##  $ help_type            : chr "html"
+##  $ HTTPUserAgent        : chr "R (3.1.2 x86_64-w64-mingw32 x86_64 mingw32)"
+##  $ internet.info        : num 2
+##  $ keep.source          : logi TRUE
+##  $ keep.source.pkgs     : logi FALSE
+##  $ knitr.in.progress    : logi TRUE
+##  $ locatorBell          : logi TRUE
+##  $ mailer               : chr "mailto"
+##  $ max.print            : int 10000
+##  $ menu.graphics        : logi FALSE
+##  $ na.action            : chr "na.omit"
+##  $ nwarnings            : int 50
+##  $ OutDec               : chr "."
+##  $ pager                :function (files, header, title, delete.file)  
+##  $ papersize            : chr "a4"
+##  $ pdfviewer            : chr "d:/PROGRA~2/R/R-31~1.2/bin/x64/open.exe"
+##  $ pkgType              : chr "win.binary"
+##  $ prompt               : chr "&gt; "
+##  $ repos                : atomic [1:2] http://mirrors.ustc.edu.cn/CRAN/ http://www.stats.ox.ac.uk/pub/RWin
+##   ..- attr(*, "RStudio")= logi TRUE
+##  $ restart              :function (afterRestartCommand = "")  
+##  $ scipen               : num 0
+##  $ shiny.launch.browser :function (url)  
+##   ..- attr(*, "shinyViewerType")= num 3
+##  $ show.coef.Pvalues    : logi TRUE
+##  $ show.error.messages  : logi TRUE
+##  $ show.signif.stars    : logi TRUE
+##  $ str                  :List of 3
+##   ..$ strict.width: chr "no"
+##   ..$ digits.d    : num 3
+##   ..$ vec.len     : num 4
+##  $ str.dendrogram.last  : chr "`"
+##  $ stringsAsFactors     : logi TRUE
+##  $ tikzMetricsDictionary: chr "2014-12-30-advR_vocabulary-tikzDictionary"
+##  $ timeout              : num 60
+##  $ ts.eps               : num 1e-05
+##  $ ts.S.compat          : logi FALSE
+##  $ unzip                : chr "internal"
+##  $ useFancyQuotes       : logi FALSE
+##  $ verbose              : logi FALSE
+##  $ viewer               :function (url, height = NULL)  
+##  $ warn                 : num 0
+##  $ warning.length       : int 1000
+##  $ width                : int 75
+##  $ windowsTimeouts      : int [1:2] 100 500
+</code></pre>
+
+<pre><code class="r">## S4 classes :
+require(stats4)
+</code></pre>
+
+<pre><code>## Loading required package: stats4
+</code></pre>
+
+<pre><code class="r">x &lt;- 0:10; y &lt;- c(26, 17, 13, 12, 20, 5, 9, 8, 5, 4, 8)
+ll &lt;- function(ymax = 15, xh = 6)
+      -sum(dpois(y, lambda=ymax/(1+x/xh), log=TRUE))
+fit &lt;- mle(ll)
+</code></pre>
+
+<pre><code>## Warning in dpois(y, lambda = ymax/(1 + x/xh), log = TRUE): NaNs produced
+</code></pre>
+
+<pre><code class="r">str(fit)
+</code></pre>
+
+<pre><code>## Formal class 'mle' [package "stats4"] with 9 slots
+##   ..@ call     : language mle(minuslogl = ll)
+##   ..@ coef     : Named num [1:2] 24.99 3.06
+##   .. ..- attr(*, "names")= chr [1:2] "ymax" "xh"
+##   ..@ fullcoef : Named num [1:2] 24.99 3.06
+##   .. ..- attr(*, "names")= chr [1:2] "ymax" "xh"
+##   ..@ vcov     : num [1:2, 1:2] 17.85 -3.72 -3.72 1.07
+##   .. ..- attr(*, "dimnames")=List of 2
+##   .. .. ..$ : chr [1:2] "ymax" "xh"
+##   .. .. ..$ : chr [1:2] "ymax" "xh"
+##   ..@ min      : num 28.6
+##   ..@ details  :List of 6
+##   .. ..$ par        : Named num [1:2] 24.99 3.06
+##   .. .. ..- attr(*, "names")= chr [1:2] "ymax" "xh"
+##   .. ..$ value      : num 28.6
+##   .. ..$ counts     : Named int [1:2] 25 18
+##   .. .. ..- attr(*, "names")= chr [1:2] "function" "gradient"
+##   .. ..$ convergence: int 0
+##   .. ..$ message    : NULL
+##   .. ..$ hessian    : num [1:2, 1:2] 0.203 0.706 0.706 3.388
+##   .. .. ..- attr(*, "dimnames")=List of 2
+##   .. .. .. ..$ : chr [1:2] "ymax" "xh"
+##   .. .. .. ..$ : chr [1:2] "ymax" "xh"
+##   ..@ minuslogl:function (ymax = 15, xh = 6)  
+##   .. ..- attr(*, "srcref")=Class 'srcref'  atomic [1:8] 10 7 11 52 7 52 10 11
+##   .. .. .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' &lt;environment: 0x0000000012cc0140&gt; 
+##   ..@ nobs     : int NA
+##   ..@ method   : chr "BFGS"
+</code></pre>
+
+<hr />
+
+<h3><code>%in%</code></h3>
+
+<p>二元运算符，功能上与match相近。返回一个逻辑值判断右边的对象是否包含左边的对象。
+example</p>
+
+<pre><code class="r">1:10 %in% c(1,3,5,9)
+</code></pre>
+
+<pre><code>##  [1]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE
+</code></pre>
+
+<pre><code class="r">sstr &lt;- c("c","ab","B","bba","c",NA,"@","bla","a","Ba","%")
+sstr[sstr %in% c(letters, LETTERS)]
+</code></pre>
+
+<pre><code>## [1] "c" "B" "c" "a"
+</code></pre>
+
+<pre><code class="r">"%w/o%" &lt;- function(x, y) x[!x %in% y] #--  x without y
+(1:10) %w/o% c(3,7,12)
+</code></pre>
+
+<pre><code>## [1]  1  2  4  5  6  8  9 10
+</code></pre>
+
+<hr />
+
+<h3><code>match</code></h3>
+
+<p>匹配函数，第一个参数与第二个参数进行匹配（二者共有），返回能够匹配上的对象在第二个参数中的位置。</p>
+
+<p>example</p>
+
+<pre><code class="r">match(c('a', 'z', 'b'), letters, nomatch = 0)
+</code></pre>
+
+<pre><code>## [1]  1 26  2
+</code></pre>
+
+<hr />
+
+<h3><code>=</code> &amp; <code>&lt;-</code> &amp; <code>&lt;&lt;-</code></h3>
+
+<p>赋值运算符，<code>&lt;-</code>可以被用于任何地方，而<code>=</code>只能用于命令行中的完整表达（不明白）或者参数赋值过程中。<code>&lt;&lt;-</code>一般用于函数内部，将局部变量变为函数变量。
+example</p>
+
+<pre><code class="r">a &lt;- b &lt;- c &lt;- 6
+aa &lt;- 0
+bb &lt;- 5
+tmp &lt;- function(){
+  aa &lt;- 1;
+  bb &lt;&lt;- 2;
+}
+
+tmp()
+print(aa)
+</code></pre>
+
+<pre><code>## [1] 0
+</code></pre>
+
+<pre><code class="r">print(bb)
+</code></pre>
+
+<pre><code>## [1] 2
+</code></pre>
+
+<hr />
+
+<h3><code>$</code>&amp; <code>[</code>&amp;<code>[[</code></h3>
+
+<p>以上3个操作符用于提取和取代对象中的元素</p>
+
+<p>example</p>
+
+<pre><code class="r">x &lt;- 1:12
+m &lt;- matrix(1:6, nrow = 2, dimnames = list(c("a", "b"), LETTERS[1:3]))
+li &lt;- list(pi = pi, e = exp(1))
+x[10]                 # the tenth element of x
+</code></pre>
+
+<pre><code>## [1] 10
+</code></pre>
+
+<pre><code class="r">x &lt;- x[-1]            # delete the 1st element of x
+m[1,]                 # the first row of matrix m
+</code></pre>
+
+<pre><code>## A B C 
+## 1 3 5
+</code></pre>
+
+<pre><code class="r">m[1, , drop = FALSE]  # is a 1-row matrix
+</code></pre>
+
+<pre><code>##   A B C
+## a 1 3 5
+</code></pre>
+
+<pre><code class="r">m[,c(TRUE,FALSE,TRUE)]# logical indexing
+</code></pre>
+
+<pre><code>##   A C
+## a 1 5
+## b 2 6
+</code></pre>
+
+<pre><code class="r">m[cbind(c(1,2,1),3:1)]# matrix numeric index
+</code></pre>
+
+<pre><code>## [1] 5 4 1
+</code></pre>
+
+<pre><code class="r">ci &lt;- cbind(c("a", "b", "a"), c("A", "C", "B"))
+m[ci]                 # matrix character index
+</code></pre>
+
+<pre><code>## [1] 1 6 3
+</code></pre>
+
+<pre><code class="r">m &lt;- m[,-1]           # delete the first column of m
+li[[1]]               # the first element of list li
+</code></pre>
+
+<pre><code>## [1] 3.141593
+</code></pre>
+
+<pre><code class="r">y &lt;- list(1, 2, a = 4, 5)
+y[c(3, 4)]            # a list containing elements 3 and 4 of y
+</code></pre>
+
+<pre><code>## $a
+## [1] 4
+## 
+## [[2]]
+## [1] 5
+</code></pre>
+
+<pre><code class="r">y$a                   # the element of y named a
+</code></pre>
+
+<pre><code>## [1] 4
+</code></pre>
+
+<pre><code class="r">## non-integer indices are truncated:
+(i &lt;- 3.999999999) # "4" is printed
+</code></pre>
+
+<pre><code>## [1] 4
+</code></pre>
+
+<pre><code class="r">(1:5)[i]  # 3
+</code></pre>
+
+<pre><code>## [1] 3
+</code></pre>
+
+<pre><code class="r">## named atomic vectors, compare "[" and "[[" :
+nx &lt;- c(Abc = 123, pi = pi)
+nx[1] ; nx["pi"] # keeps names, whereas "[[" does not:
+</code></pre>
+
+<pre><code>## Abc 
+## 123
+</code></pre>
+
+<pre><code>##       pi 
+## 3.141593
+</code></pre>
+
+<pre><code class="r">nx[[1]] ; nx[["pi"]]
+</code></pre>
+
+<pre><code>## [1] 123
+</code></pre>
+
+<pre><code>## [1] 3.141593
+</code></pre>
+
+<pre><code class="r">## recursive indexing into lists
+z &lt;- list(a = list(b = 9, c = "hello"), d = 1:5)
+unlist(z)
+</code></pre>
+
+<pre><code>##     a.b     a.c      d1      d2      d3      d4      d5 
+##     "9" "hello"     "1"     "2"     "3"     "4"     "5"
+</code></pre>
+
+<pre><code class="r">z[[c(1, 2)]]
+</code></pre>
+
+<pre><code>## [1] "hello"
+</code></pre>
+
+<pre><code class="r">z[[c(1, 2, 1)]]  # both "hello"
+</code></pre>
+
+<pre><code>## [1] "hello"
+</code></pre>
+
+<pre><code class="r">z[[c("a", "b")]] &lt;- "new"
+unlist(z)
+</code></pre>
+
+<pre><code>##     a.b     a.c      d1      d2      d3      d4      d5 
+##   "new" "hello"     "1"     "2"     "3"     "4"     "5"
+</code></pre>
+
+<hr />
+
+<h3><code>head</code> &amp; <code>tail</code></h3>
+
+<p>获得数据头部或尾部的部分数据，默认显示6行，可设定参数n调整。n可以为负值表示逆向去除。</p>
+
+<p>example</p>
+
+<pre><code class="r">head(letters)
+</code></pre>
+
+<pre><code>## [1] "a" "b" "c" "d" "e" "f"
+</code></pre>
+
+<pre><code class="r">head(letters, n = -6L)
+</code></pre>
+
+<pre><code>##  [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q"
+## [18] "r" "s" "t"
+</code></pre>
+
+<pre><code class="r">tail(letters, n = -3)
+</code></pre>
+
+<pre><code>##  [1] "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t"
+## [18] "u" "v" "w" "x" "y" "z"
+</code></pre>
+
+<hr />
+
+<h3><code>subset</code></h3>
+
+<p>筛选数据集
+<code>subset(x, subset, select, drop = FALSE, ...)</code>
+参数介绍
+x 被处理的数据集
+subset  筛选的标准,可根据数据的内容和行名进行选择
+select  返回的数据列</p>
+
+<blockquote><p>dplyr 包提供了filter函数,比之更为强大.</p></blockquote>
+
+<p>example</p>
+
+<pre><code class="r">library(dplyr)
+subset(airquality, Temp &gt; 80, select = c(Ozone, Temp)) %&gt;% head()
+</code></pre>
+
+<pre><code>##    Ozone Temp
+## 29    45   81
+## 35    NA   84
+## 36    NA   85
+## 38    29   82
+## 39    NA   87
+## 40    71   90
+</code></pre>
+
+<pre><code class="r">subset(airquality, Day == 1, select = -Temp) %&gt;% head()
+</code></pre>
+
+<pre><code>##     Ozone Solar.R Wind Month Day
+## 1      41     190  7.4     5   1
+## 32     NA     286  8.6     6   1
+## 62    135     269  4.1     7   1
+## 93     39      83  6.9     8   1
+## 124    96     167  6.9     9   1
+</code></pre>
+
+<pre><code class="r">subset(airquality, select = Ozone:Wind) %&gt;% head()
+</code></pre>
+
+<pre><code>##   Ozone Solar.R Wind
+## 1    41     190  7.4
+## 2    36     118  8.0
+## 3    12     149 12.6
+## 4    18     313 11.5
+## 5    NA      NA 14.3
+## 6    28      NA 14.9
+</code></pre>
+
+<pre><code class="r">#subset 也可以是逻辑值(T or F),对需要的行进行筛选
+nm &lt;- rownames(state.x77)
+subset(state.x77, grepl("^M", nm), Illiteracy:Murder)
+</code></pre>
+
+<pre><code>##               Illiteracy Life Exp Murder
+## Maine                0.7    70.39    2.7
+## Maryland             0.9    70.22    8.5
+## Massachusetts        1.1    71.83    3.3
+## Michigan             0.9    70.63   11.1
+## Minnesota            0.6    72.96    2.3
+## Mississippi          2.4    68.09   12.5
+## Missouri             0.8    70.69    9.3
+## Montana              0.6    70.56    5.0
+</code></pre>
+
+<hr />
+
+<h3><code>with</code> &amp; <code>transform</code></h3>
+
+<p>对现有数据中的的列进行处理</p>
+
+<blockquote><p>dplyr包中有更为强大的mutate函数</p></blockquote>
+
+<p>example</p>
+
+<pre><code class="r">aq &lt;- within(airquality, {     # Notice that multiple vars can be changed
+    lOzone &lt;- log(Ozone)
+    Month &lt;- factor(month.abb[Month])
+    cTemp &lt;- round((Temp - 32) * 5/9, 1) # From Fahrenheit to Celsius
+    rm(Day, Temp)
+})
+head(aq)
+</code></pre>
+
+<pre><code>##   Ozone Solar.R Wind Month cTemp   lOzone
+## 1    41     190  7.4   May  19.4 3.713572
+## 2    36     118  8.0   May  22.2 3.583519
+## 3    12     149 12.6   May  23.3 2.484907
+## 4    18     313 11.5   May  16.7 2.890372
+## 5    NA      NA 14.3   May  13.3       NA
+## 6    28      NA 14.9   May  18.9 3.332205
+</code></pre>
+
+<pre><code class="r">head(airquality)
+</code></pre>
+
+<pre><code>##   Ozone Solar.R Wind Temp Month Day
+## 1    41     190  7.4   67     5   1
+## 2    36     118  8.0   72     5   2
+## 3    12     149 12.6   74     5   3
+## 4    18     313 11.5   62     5   4
+## 5    NA      NA 14.3   56     5   5
+## 6    28      NA 14.9   66     5   6
+</code></pre>
+
+<pre><code class="r">head(transform(airquality, Ozone = -Ozone))
+</code></pre>
+
+<pre><code>##   Ozone Solar.R Wind Temp Month Day
+## 1   -41     190  7.4   67     5   1
+## 2   -36     118  8.0   72     5   2
+## 3   -12     149 12.6   74     5   3
+## 4   -18     313 11.5   62     5   4
+## 5    NA      NA 14.3   56     5   5
+## 6   -28      NA 14.9   66     5   6
+</code></pre>
+
+<pre><code class="r">######
+with(subset(ToothGrowth, supp == "VC"),
+     boxplot(len ~ dose, boxwex = 0.25, at = 1:3 - 0.2,
+             col = "yellow", main = "Guinea Pigs' Tooth Growth",
+             xlab = "Vitamin C dose mg",
+             ylab = "tooth length", ylim = c(0, 35)))
+</code></pre>
+
+<h2><img src="figure/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /> </h2>
+
+<h3><code>assign</code></h3>
+
+<p>为数值分配一个名字,解决为字符串赋值的问题,同时可以解决环境变量问题</p>
+
+<p>example</p>
+
+<pre><code class="r">for(i in 1:6) { #-- Create objects  'r.1', 'r.2', ... 'r.6' --
+    nam &lt;- paste("r", i, sep = ".")
+    assign(nam, 1:i) # r.1 到 r.6都被赋值
+}
+ls(pattern = "^r..$") # 正则表达式
+</code></pre>
+
+<pre><code>## [1] "r.1" "r.2" "r.3" "r.4" "r.5" "r.6"
+</code></pre>
+
+<pre><code class="r">a &lt;- 1:4
+assign("a[1]", 2)  #为'a[1]'赋值为2,但是实际a[1]为1,需要通过get获得
+a[1] == 2          # FALSE
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+<pre><code class="r">get("a[1]") == 2   # TRUE
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<hr />
+
+<h3><code>get</code></h3>
+
+<p>获得变量的值,可以是全局环境变量,也可以是其他环境变量(函数也属于变量)但需要envir参数进行限制.<code>assign</code>赋值的变量,可以通过<code>get</code>获得.</p>
+
+<p>example</p>
+
+<pre><code class="r">test &lt;- function(x){
+  e1 &lt;&lt;- environment() # 获得当前变量
+  a &lt;- 5 # 此处亦可以 assign('a',5) 对当前环境下变量进行赋值,a必须加引号
+  b &lt;- a+x
+  print(b)
+}
+test(2) # 执行函数
+</code></pre>
+
+<pre><code>## [1] 7
+</code></pre>
+
+<pre><code class="r">ls() # 全局环境中的变量
+</code></pre>
+
+<pre><code>##  [1] "%w/o%" "a"     "a[1]"  "aa"    "aq"    "b"     "bb"    "c"    
+##  [9] "ci"    "e1"    "fit"   "i"     "li"    "ll"    "m"     "nam"  
+## [17] "nm"    "nx"    "op"    "r.1"   "r.2"   "r.3"   "r.4"   "r.5"  
+## [25] "r.6"   "sstr"  "test"  "tmp"   "x"     "y"     "z"
+</code></pre>
+
+<pre><code class="r">ls(envir = e1) # e2环境中的变量
+</code></pre>
+
+<pre><code>## [1] "a" "b" "x"
+</code></pre>
+
+<pre><code class="r">get('a', envir = e1) # 必须将变量用引号引起
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+
+<hr />
+
+<h2>Comparison</h2>
+
+<h3><code>all.equal</code></h3>
+
+<p>比较两个R对象是否相同,并返回报告, 可以通过 <code>tolerance</code> 调节差异的精确度</p>
+
+<p>example</p>
+
+<pre><code class="r">all.equal(pi, 355/113) 
+</code></pre>
+
+<pre><code>## [1] "Mean relative difference: 8.491368e-08"
+</code></pre>
+
+<pre><code class="r"># not precise enough (default tol) &gt; relative error
+
+d45 &lt;- pi*(1/4 + 1:10)
+stopifnot(
+all.equal(tan(d45), rep(1, 10)))  # 误差允许范围内,认为是正确的
+all      (tan(d45) == rep(1, 10)) # 错误,因为二者并非完全相等
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+<pre><code class="r">all.equal(tan(d45), rep(1, 10), tolerance = 0)  # 将 容差设置为0,则为错
+</code></pre>
+
+<pre><code>## [1] "Mean relative difference: 1.29526e-15"
+</code></pre>
+
+<hr />
+
+<h3>all &amp; any</h3>
+
+<p> 判断给定的逻辑值,如果都为真,则<code>all</code>为真,<code>any</code>为真;有一者真则<code>any</code>为真,有一者假则<code>all</code>为假.</p>
+
+<p>example</p>
+
+<pre><code class="r">any(c(1==1, 2==3))  # T
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+
+<pre><code class="r">all(c(1==1, 2==2, 2==3))  # F
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+<hr />
+
+<h3>identical</h3>
+
+<pre><code class="r">library(knitr)
+knit('2014-12-30-advR_vocabulary.Rmd', output = 'F:/blog/_posts/2014-12-30-advR_vocabulary.md')
+</code></pre>
+
+</div>
+<div class="pure-g pagination">
+    
+    <a class="pure-u-1-2 pagination-item " href="/r/funSet.html" title="R语言函数集合 ">
+        <p> <i class="fa fa-mail-reply"></i>&nbsp;R语言函数集合</p>
+    </a>
+     
+    <a class="pure-u-1-2 pagination-item " href="/paper/Systematic%20identification%20of%20genomic.html" title="Systematic identification of genomic markers of drug sensitivity in cancer cells">
+        <p>Systematic identification of genomic markers of drug sensitivity in cancer cells&nbsp;<i class="fa fa-mail-forward"></i>
+        </p>
+    </a>
+    
+</div>
+<link href="/css/code.css" rel="stylesheet">
+<link href="/css/min/fancybox.css" rel="stylesheet">
+<script src="/js/min/jquery.toc.min.js"></script>
+<script src="/js/min/jquery.qrcode.min.js"></script>
+<script src="/js/min/jquery.fancybox.pack.js"></script>
+<script src="/js/page.js"></script>
+
+ 
+    
+
+<div id="comment">
+<style type="text/css">
+.cm{
+    margin: 0 10px;
+}
+    .cm:hover{
+        cursor:pointer;
+    }
+</style>
+<h3>COMMENT
+    <span class='cm' onclick='showduoshuo();'>多说</span>
+    <span class='cm' onclick='showqisqus();' style=' font-size:20px;'>Disqus</span></h3>
+    <div id="disqus_thread"></div>
+    <!-- 多说评论框 start -->
+    <div id="ds-thread" class="ds-thread" style='display: none;'  data-title="The Vocabulary in Advanced R by Hadley Wickham" data-url=""></div>
+
+</div>
+
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+var duoshuoQuery = {
+        short_name: "cangfengzhe"
+    };
+
+
+
+
+var disqus_shortname = 'cangfengzhe'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+    })();
+
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+
+var ds=document.getElementById('ds-thread');
+var dsq=document.getElementById('disqus_thread')
+function showduoshuo() {
+    ds.style.display = 'block';
+    ds.style.color='#444';
+    dsq.style.display = 'none';
+    
+
+    
+}
+
+function showqisqus() {
+
+    ds.style.display = 'none';
+
+    dsq.style.display = 'block';
+    dsq.style.color='#444';
+
+    
+}
+
+ 
+
+</script>
+
+
+            </div>
+            </div>
+        <div class="footer">
+                <!-- <a href="/love/welcome-my-blog.html">About</a>
+                 <a href="/1">Collecting</a>
+                <a href="tencent://message/?uin=78956287">QQ</a> -->
+                <a href="https://github.com/cangfengzhe">GitHub</a>
+            <script src="/js/min/nprogress.min.js"></script>
+            <script src="/js/index.js"></script>
+        </div>
+        <div class="topfade"><a href="javascript:;" title="返回顶部"></a></div>
+
+    </div>
+
+</div>
+	<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

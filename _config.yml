@@ -1,0 +1,25 @@
+#production_url是sitemap.txt生成的url,方便百度谷歌收录
+production_url: http://cangfengzhe.github.io
+#
+# Jekyll Settings
+description: "爱生活 爱小小白 你若不离不弃 我必生死相依 R语言 生物信息 数据挖掘 文本挖掘 机器学习 data mining "
+#rdiscount解析器对于嵌入html javascript代码,为文章增加特定效果兼容较好
+markdown: rdiscount
+rdiscount:
+  extensions: [  "autolink", ]
+markdown_ext:  markdown,mkd,mkdn,md,Rmd
+
+permalink: /:categories/:title.html
+redcarpet:
+  extensions: [fenced_code_blocks]
+  render_options:
+paginate: 7
+paginate_path: "page/:num"
+exclude: [ "README.md",".idea",".iml",".name",".Node"]
+encoding: "utf-8"
+#在发布文章时使用一个未来的日期
+future: true
+#产生相关页面的索引
+lsi:      false
+#禁用定制插件
+safe:     false

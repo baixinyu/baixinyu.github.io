@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="./build/cytoscape.js"></script>
+    <script src='./build/jquery-2.1.1.min.js'></script>
+    <!--     <script src="./lib/layout.cose.js"></script>
+    <script src="./lib/arbor.js"></script>
+    <script src="./lib/dagre.js"></script>
+    <script src="./lib/layout.breadthfirst.js"></script>
+    <script src="./lib/layout.circle.js"></script>
+    <script src="./lib/layout.concentric.js"></script>
+    <script src="./lib/layout.cose.js"></script>
+    <script src="./lib/layout.grid.js"></script>
+    <script src="./lib/layout.null.js"></script>
+    <script src="./lib/layout.preset.js"></script>
+    <script src="./lib/layout.random.js"></script>
+    <script src="./lib/springy.js"></script> -->
+    
+    <script>
+    $(function() {
+                  var url = './network.json';
+        $.ajax(url, {
+            async: false,
+            success: function(data) {
+                bb = data; // bb为全局变量
+                console.log(jQuery.parseJSON(bb))
+
+            },
+
+
+        });
+
+                 var aa = jQuery.parseJSON(bb);
+       
+        // var cy = cytoscape({
+
+        //     container: document.getElementById('cy'),
+        //     elements: {nodes:aa.elements.nodes,
+        //                 edges:aa.elements.edges},
+
+
+
+        //     // style: cytoscape.stylesheet()
+        //     //     .selector('node[id ^= "gene"]')
+        //     //     .css({
+        //     //         'background-color': 'red'
+        //     //     })
+        //     //     .selector('node[id ^= "mir"]')
+        //     //     .css({
+        //     //         'background-color': 'orange'
+        //     //     })
+        //     //     .selector('node[id ^= "lnc"]')
+        //     //     .css({
+        //     //         'background-color': 'yellow'
+        //     //     })
+        //     //     .selector('node[id ^= "dis"]')
+        //     //     .css({
+        //     //         'background-color': 'green'
+        //     //     })
+        //     //     .selector('node[id ^= "drug"]')
+        //     //     .css({
+        //     //         'background-color': 'blue'
+        //     //     })
+        //     //     .selector('edge')
+        //     //     .css({
+        //     //         'line-color': '#F6C28C'
+        //     //     }),
+        //     ready: function() {
+        //         console.log('ready')
+        //         console.log(cy.json());
+        //         $('#png').html('<a href="' + cy.png() + '" >dfsa</a>')
+        //     },
+           
+
+
+
+
+        // })
+
+        // cy.on('tap', 'node', function(evt) {
+        //     evt.cyTarget.css('background-color', 'blue');
+        //     // evt.cyTarget.neighborhood().css('background-color', 'red');
+        //     // $('#info').text(evt.cyTarget.degree() + evt.cyTarget.data('id'));
+            
+        // });
+
+
+                })
+    </script>
+</head>
+
+<body>
+    <div id="cy">lipidong</div>
+</body>
+
+</html>
